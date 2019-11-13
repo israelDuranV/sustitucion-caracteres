@@ -1,0 +1,43 @@
+Sustituir cadenas de carácteres a utf8
+
+public function Sustituto_Cadena($rb){
+    ## Sustituyo caracteres en la cadena final
+    $rb = str_replace("Ã¡", "&aacute;", $rb);
+    $rb = str_replace("Ã©", "&eacute;", $rb);
+    $rb = str_replace("Â®", "&reg;", $rb);
+    $rb = str_replace("Ã­", "&iacute;", $rb);
+    $rb = str_replace("ï¿½", "&iacute;", $rb);
+    $rb = str_replace("Ã³", "&oacute;", $rb);
+    $rb = str_replace("Ãº", "&uacute;", $rb);
+    $rb = str_replace("n~", "&ntilde;", $rb);
+    $rb = str_replace("Âº", "&ordm;", $rb);
+    $rb = str_replace("Âª", "&ordf;", $rb);
+    $rb = str_replace("ÃƒÂ¡", "&aacute;", $rb);
+    $rb = str_replace("Ã±", "&ntilde;", $rb);
+    $rb = str_replace("Ã‘", "&Ntilde;", $rb);
+    $rb = str_replace("ÃƒÂ±", "&ntilde;", $rb);
+    $rb = str_replace("n~", "&ntilde;", $rb);
+    $rb = str_replace("Ãš", "&Uacute;", $rb);
+    return $rb;
+}
+Sustitución con javascript
+
+let Sustituto_Cadena = (str)=>{
+    str = str.replace(new RegExp("Ã¡","g"),"&aacute;");
+    str = str.replace(new RegExp("Ã©","g"),"&eacute;");
+    str = str.replace(new RegExp("Â®","g"),"&reg;");
+    str = str.replace(new RegExp("Ã","g"),"&iacute;");
+    str = str.replace(new RegExp("ï¿½","g"),"&iacute;");
+    str = str.replace(new RegExp("Ã³","g"),"&oacute;");
+    str = str.replace(new RegExp("Ãº","g"),"&uacute;");
+    str = str.replace(new RegExp("n~","g"),"&ntilde;");
+    str = str.replace(new RegExp("Âº","g"),"&ordm;");
+    str = str.replace(new RegExp("Âª","g"),"&ordf;");
+    str = str.replace(new RegExp("ÃƒÂ¡","g"),"&aacute;");
+    str = str.replace(new RegExp("Ã±","g"),"&ntilde;");
+    str = str.replace(new RegExp("Ã‘","g"),"&Ntilde;");
+    str = str.replace(new RegExp("ÃƒÂ±","g"),"&ntilde;");
+    str = str.replace(new RegExp("n~","g"),"&ntilde;");
+    str = str.replace(new RegExp("Ãš","g"),"&Uacute;");
+    return str;
+}
